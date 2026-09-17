@@ -9,6 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.3.4",
+    "antd": "^6.6.4",
+    "cloudinary": "^2.11.0",
+    "mongoose": "^9.9.5",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"
