@@ -62,29 +62,7 @@ export default function Home() {
       color: '#3f6600',
     },
   };
-  // const styleFn = ({ props }) => {
-  //   if (props.type === 'error') {
-  //     return {
-  //       ...defaultStyles,
-  //       root: {
-  //         ...defaultStyles.root,
-  //         backgroundColor: '#fff2f0',
-  //         borderColor: '#ffccc7',
-  //         boxShadow: '4px 4px 0 #ffccc7',
-  //       },
-  //       icon: {
-  //         color: '#cf1322',
-  //       },
-  //       title: {
-  //         color: '#cf1322',
-  //       },
-  //       description: {
-  //         color: '#5c0011',
-  //       },
-  //     };
-  //   }
-  //   return defaultStyles;
-  // };\
+
   const styleFn = ({ props }: { props: { type?: string } }) => {
     if (props.type === 'error') {
       return {
@@ -132,7 +110,7 @@ export default function Home() {
           type: 'error',
           styles: styleFn,
         });
-        throw new Error("Failed to fetch posts");
+        throw  Error("Failed to fetch posts");
       }
 
       const getData = await response.json();
@@ -348,19 +326,19 @@ export default function Home() {
               <div className="w-full lg:w-[380px]">
                 <div
                   className="
-          group relative flex h-14 items-center
-          rounded-2xl border border-slate-200
-          bg-white/80
-          shadow-lg
-          backdrop-blur-xl
-          transition-all duration-300
-          hover:border-purple-200
-          hover:shadow-md
-          focus-within:border-purple-400
-          focus-within:shadow-lg
-          focus-within:shadow-purple-100
-         border-2 border-red-900
-        "
+                              group relative flex h-14 items-center
+                              rounded-2xl border border-slate-200
+                              bg-white/80
+                              shadow-lg
+                              backdrop-blur-xl
+                              transition-all duration-300
+                              hover:border-purple-200
+                              hover:shadow-md
+                              focus-within:border-purple-400
+                              focus-within:shadow-lg
+                              focus-within:shadow-purple-100
+                            border-2 border-red-900
+                            "
                 >
                   {/* Search Icon */}
                   <div className="pointer-events-none absolute left-4 flex items-center">

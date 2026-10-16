@@ -24,20 +24,6 @@ export async function POST(req, { params }) {
     await connectMongo();
 
     // Check whether the post exists
-    // const post = await postModel.findById(id);
-
-    // if (!post) {
-    //   return Response.json(
-    //     {
-    //       success: false,
-    //       message: "Post not found",
-    //     },
-    //     {
-    //       status: 404,
-    //     }
-    //   );
-    // }
-
     // Read request body
     const body = await req.json();
 

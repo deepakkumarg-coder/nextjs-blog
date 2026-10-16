@@ -94,13 +94,11 @@ export default function CreatePostPage() {
   const [isDragging, setIsDragging] = useState(false);
 
 
-// console.log("THIS IS FORM DATA BEFORE ISFORMVALID",formData)
   const isFormValid =
     Object.values(formData).every(
       (value) => value?.trim() !== ""
     ) && (isEditMode || Boolean(image));
-  // console.log("this is checking isformvaluid", isFormValid,!isFormValid,loading)
-  {/*This is set the tab name */ }
+
   useEffect(() => {
     document.title = isEditMode ? " Edit  | Page" : "Create | Page"
   }, [])
@@ -164,7 +162,6 @@ export default function CreatePostPage() {
       alert("Image size should be less than 5MB.");
       return;
     }
-    console.log("checking file data", file);
     setImage(file);
     setPreview(URL.createObjectURL(file));
   };
@@ -312,13 +309,6 @@ export default function CreatePostPage() {
 
           {/* Header */}
           <div className="mb-10 animate-[fadeIn_0.5s_ease-out]">
-
-            {/* <Link
-            href="/"
-            className="mb-6 inline-flex items-center gap-2 text-sm font-medium text-gray-500 transition-all duration-300 hover:-translate-x-1 hover:text-gray-900"
-          >
-            ← Back to Home
-          </Link> */}
 
             {/* Badge */}
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-4 py-2 text-sm font-medium text-purple-600">

@@ -2,6 +2,8 @@ import connectMongo from "../../../utils/connectmongo"
 import postModel from "../../../models/postModel"
 import fs from "fs/promises";
 import path from "path";
+
+
 export async function GET(req) {
     try {
         const type = req.nextUrl.searchParams.get('type');
